@@ -9,7 +9,7 @@
 |	[ pwd ] – print working directory
 
 |	[ ls –l ] – таблица с правами и датой изменения
-|    [ ls -lh ] – то же самое, но более по-людски (h - human-readable)
+|	[ ls -lh ] – то же самое, но более по-людски (h - human-readable)
 |	[ ls -lR ] – с рекурсией
 
 |	[ touch ] – быстро создать файл
@@ -27,5 +27,14 @@
 
 | owner - owner_group - other
 
-| [ chmod  ]
+|	[ chmod  a=rwx ] – установить права для всех
+|	[ chmod -R ugo-x ]  – убавить права рекурсионно
+
+|	[ chown user_name file_name ] – так вот 
+|	[ chgrp group_name file_name ] – вот так вот
+|	[ groups user_name ] - посмотреть группы
+
+
+
+
 
