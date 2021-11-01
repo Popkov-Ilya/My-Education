@@ -32,7 +32,32 @@
 
 |	[ chown user_name file_name ] – так вот 
 |	[ chgrp group_name file_name ] – вот так вот
-|	[ groups user_name ] - посмотреть группы
+
+
+
+### find
+
+|	[ grep -i word /file_path ] - поиск без учета регистра в файле
+|	[ cat /file_path | grep -i "some words" ]
+
+|	[ locate word ] - ищет файл по слову
+|	[ locate /path --all "word" ] - то же самое
+|	[ locate --all -c -i "word" ] - вывести количество совпадений с игнором регистра
+
+
+
+### info
+
+|	[ whoami ]  - понятно
+|	[ hostname ] - тоже
+|	[ sudo vim /etc/hostname ] - а вот такого я не ожидал
+|	[ id ] - айдишники пользователя, основной группы, всех групп
+|	[ groups ] - группы
+|	[ groups user_name ] - группы пользователя
+|	[ lsb_release -a ] - инфа про операционку
+|	[ cat /etc/issue ] - тоже инфа про операционку
+|	[ cat /etc/os-release] - тоже инфа про операционку
+|	[ cat /etc/*release] - тоже инфа про операционку
 
 
 
