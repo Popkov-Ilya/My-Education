@@ -64,11 +64,33 @@ https://youtu.be/1hvVcEhcbLM
 
 
 
+|	[ useradd user_name ] – намутить пользователя
+
+|	[ useradd -m -c "comment" -s /bin/bash user_name ] – (m=домашняя дирректория; c = comment)
+
+|	[ passwd ] – изменить свой пароль
+
+|	[ passwd user_name ] – изменить кому-то другому 
+
+|	[ userdel -r user_name ] – выпилить пользователя
+
+|	[ usermod -aG user_name group_name ] – добавить пользователя в рок-группу (возможно в группу admin)
+
+|	[ visudo ] – только от имени рута или админа можно редачить пользователей
+
+\	username ALL=(ALL:ALL) ALL	= пользователь может из любой сессии(1) для всех юзеров(2) для всех групп(3) применять любые команды(4)
+
+\ username ALL=(ALL) /usr/bin/apt-get	= пользователь может использовать из судо только апт-гет
+
+
+
 ## FIND
 
 |	[ grep -i word /file_path ] – поиск без учета регистра в файле
 
 |	[ cat /file_path | grep -i "some words" ]
+
+|	[ file file_name ] – тип файла
 
 
 
@@ -169,4 +191,16 @@ https://youtu.be/1hvVcEhcbLM
 
 
 ## Compressions
+
+|	[ tar -cf tar_name directory_path ] – создать архив директории
+
+|	[ tar -cvf tar_name directory_path ] – (v=verbose)
+
+|	[ tar -cvzf tar.gz_name directory_path ] – (z=gzip)
+
+|	[ tar -xvf tar_name ] – распаковывает с объяснениями и перезаписью автоматом
+
+|	[ tar -xvzf tar.gz_name ] – распаковывает tar.gz 
+
+|	[ bzip2 ] – сам разберешься :)
 
