@@ -80,7 +80,13 @@ https://youtu.be/1hvVcEhcbLM
 
 \	username ALL=(ALL:ALL) ALL	= пользователь может из любой сессии(1) для всех юзеров(2) для всех групп(3) применять любые команды(4)
 
-\ username ALL=(ALL) /usr/bin/apt-get	= пользователь может использовать из судо только апт-гет
+\	username ALL=(ALL) /usr/bin/apt-get	= пользователь может использовать из судо только апт-гет
+
+\	%group_name ALL=(ALL:ALL) /usr/bin/apt =группа члены которой могут выполнять эти команды
+
+
+
+
 
 
 
@@ -128,9 +134,15 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ id ] – айдишники пользователя, основной группы, всех групп
 
-|	[ groups ] – группы
+|	[ groups ] – посмотреть все группы?
 
-|	[ groups user_name ] – группы пользователя
+|	[ cat /etc/group ] – тоже посмотреть все группы
+
+|	[ groups User_name ] – посмотреть группы пользователя
+
+|	[ groupadd group_name ] – создать группу
+
+|	[ usermod -aG group_name user_name ] – добавить юзера в группу
 
 |	[ lsb_release -a ] – инфа про операционку
 
@@ -203,4 +215,46 @@ https://youtu.be/1hvVcEhcbLM
 |	[ tar -xvzf tar.gz_name ] – распаковывает tar.gz 
 
 |	[ bzip2 ] – сам разберешься :)
+
+
+
+## Network
+
+|	[ ifconfig ] – олдовый способ (отворачивающийся дрейк)
+
+|	[ ifconfig | grep inet ] – удобно смотреть на адреса
+
+|	[ ip ] – молодежный способ (кивающий дрейк)
+
+|	[ ip route show ] – показать таблицу маршрутизации
+
+|	[ ip addr ] – посмотреть адреса
+
+|	[ dhclient ] – (dynamic host configuration protocol (dhcp) client)
+
+|	[ service networtk-manager restart ] – вроде как перезагрузить сетевой адаптер для получения нового ip
+
+|	[ systemctl restart network-manager.service ] – то же самое
+
+|	[ netstat -r ] – таблица маршрутизации
+
+|	[ netstat -t ] – таблица tcp подключений
+
+|	[ netstat -l ] – список прослушиваемых портов
+
+|	[ netstat -lt ] – список прослушиваемых tcp портов
+
+|	[ netstat -lu ] – список прослушиваемых udp портов
+
+|	[ netstat -p ] – список процессов слушающих порты
+
+|	[ netdiscover -i interface_name] – сканит сеть с помощью arp
+
+|	[ cat /etc/resolv.conf ] – какая-то инфа про DNS
+
+|	[ systemd-resolve --status ] – еще какая-то инфа про DNS
+
+|	[ vim /etc/hosts ] – инфа про хосты
+
+\	0.0.0.0 google.com = заблочить гугл зачем-то??? + не забыть перезапустить адаптер
 
