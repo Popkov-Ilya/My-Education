@@ -258,3 +258,103 @@ https://youtu.be/1hvVcEhcbLM
 
 \	0.0.0.0 google.com = заблочить гугл зачем-то??? + не забыть перезапустить адаптер
 
+
+
+## Tor & proxy
+
+|	[ systemctl start tor ] – стартануть тор
+
+|	[ netstat -lt | grep 9050 ] – посмотреть, что тор слушает 9050
+
+|	[ vim /etc/proxychains.conf ] – настроить прокси
+
+\	random_chain
+
+\	proxy_dns
+
+\	socks4    127.0.0.1    9050
+
+\	socks5    127.0.0.1    9050 
+
+|	[ proxychains firefox dnsleaktest.com ] – протестить прокси
+
+
+
+## Service & process management
+
+|	[ top ] – обычный менеджер процессов
+
+|	[ htop ] – интерактивный менеджер процессов
+
+|	[ free ] – использование RAM
+
+|	[ free -h ] – "human-readable"
+
+|	[ ps ] – процессы в этом терминале (снапшот)
+
+|	[ ps aux ] – все процессы системы (снапшот)
+
+|	[ kill pid_number ] – убить процесс (9 - это послать в процесс сигнал systemkill, но я хз как его использовать)
+
+|	*Не путай сервис и процесс. Убить процесс - не значит убить сервис*
+
+|	[ systemctl ] – все сервисы
+
+|	[ systemctl start service_name ] – запустить сервис
+
+|	[ systemctl stop service_name ] – остановить сервис
+
+|	[ systemctl reload service_name ] – загрузить новую конфигурацию
+
+|	[ systemctl restart service_name ] – запустить заново со старой конфигурацией
+
+|	[ systemctl is-enable service_name ] – проверить включен ли сервис
+
+|	[ systemctl enable service_name ] – включает сервис и генерирует symlink
+
+|	[ systemctl disable servise_name ] – выключает
+
+|	[ service service_name start/stop/status/restart ] – тоже самое, но почему-то хуже
+
+
+
+## SSH
+
+|	*юзаем openssh*
+
+|	*есть клиент, а есть сервер, надо помнить*
+
+|	[ apt install openssh-client ] – можно поставить только клиента
+
+|	[ cat /etc/ssh/ssh_config ] – конфиг ssh клиента
+
+|	[ ssh user_name@host_name ] – подрубиться к серверу
+
+|	[ apt install openssh-server ] – поставить сервер
+
+|	[ sudo vim /etc/ssh/sshd_config ] – настройки ssh сервера
+
+\	PerminRootLogin no	=запретить подключаться к root-пользователю
+
+\	MaxAuthTries 4	=Лимит попыток подключения
+
+\	MaxSession 3	=Лимит сессий
+
+\	PasswordAuthenticarion no	=Закрыть подключение по паролю, только по рса ключу
+
+|	[ systemctl restart sshd.service ] – не забываем перезагрузить
+
+|	[ sudo passwd -l root ] – заблокировать пароль рута (зачем?)
+
+|	[ sudo passwd root ] – снова задать пароль руту
+
+|	[ ssh-keygen -t rsa ] – сгенерировать ключ для ssh
+
+|	[ ssh-copy-id host_name ] – скопировать id сервера 
+
+|	[ ssh -i id_rsa_file user_name@host_name ] – подключение по ключу
+
+|	[ chmod 400 id_rsa ] – важно защищать свои приватные ключи
+
+|	[ scp file_name user_name@host_name:/path/to/directory ]
+
