@@ -358,3 +358,23 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ scp file_name user_name@host_name:/path/to/directory ]
 
+
+
+## CURL
+
+|	[ curl <u>link</u> ] – загрузить сайт
+
+|	[ curl -o /path/to/file.html <u>link</u> ] – сохранить в файл
+
+|	[ curl -o ubuntuIso.iso <u>link</u> ] – скачать файл (убунту)
+
+|	[ curl -O <u>link</u> ] – скачать файл с оригинальным именем 
+
+|	[ curl -L <u>link</u> ] – скачать с переходом по редиректу
+
+|	[ curl -I <u>link</u> ] – ответ от сервера (HTTP-header)
+
+|	[ curl -v <u>link</u> ] – посмотреть на TLS-handshake
+
+|	[ curl --data "log=admin&pwd=password" <u>link</u> ] – послать данные на сайт с помощью POST
+
