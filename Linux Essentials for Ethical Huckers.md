@@ -218,7 +218,7 @@ https://youtu.be/1hvVcEhcbLM
 
 
 
-## Network
+## NETWORK
 
 |	[ ifconfig ] – олдовый способ (отворачивающийся дрейк)
 
@@ -260,7 +260,7 @@ https://youtu.be/1hvVcEhcbLM
 
 
 
-## Tor & proxy
+## TOR & PROXY
 
 |	[ systemctl start tor ] – стартануть тор
 
@@ -280,7 +280,7 @@ https://youtu.be/1hvVcEhcbLM
 
 
 
-## Service & process management
+## SERVICE & PROCESS MANAGEMENT
 
 |	[ top ] – обычный менеджер процессов
 
@@ -378,3 +378,34 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ curl --data "log=admin&pwd=password" <u>link</u> ] – послать данные на сайт с помощью POST
 
+
+
+## UFW
+
+*uncomplicated firewall*
+
+|	[ ufw status ] – посмотреть включен ли ufw
+
+|	[ ufw status vervose ] – то же, но по людски
+
+|	[ ufw status numbered ] – то же, но с номерами
+
+|	[ ufw enable / disable ] – вкл / выкл
+
+|	[ ufw reset ] – к исходным конфигурациям
+
+|	[ ufw default deny incoming ] – запретить входящие (изначально наоборот вроде)
+
+|	[ ufw default allow outgoing ] – разрешить выходящие (изначально вроде опять таки наоборот)
+
+|	[ ufw allow ssh ] – одобряю ssh
+
+|	[ uwf allow 22 ] – то же самое
+
+|	[ ufw allow proto tcp from any to any port 80, 443 ] – разрешить и http и https в одном правиле
+
+|	[ ufw allow from <u>ip.ip.ip.ip</u> ] – разрешить с определенного ip
+
+|	[ ufw allow from <u>ip.ip.ip.ip/mask</u> to any port 22 ] – разрешить ssh с маски
+
+|	[ ufw delete 1 ] – удалить первое правило
