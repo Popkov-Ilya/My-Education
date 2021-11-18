@@ -430,3 +430,30 @@ https://youtu.be/1hvVcEhcbLM
 
 *ssh bruteforce protection*
 
+|	[ systemctl enable fial2ban.service ] – активируй после установки
+
+|	[ nano /etc/fial2ban/jail.conf ] – файл конфигурации (посмотреть)
+
+|	[ nano /etc/fail2ban/jail.local ] – файл конфигураций (попечатать)
+
+\	[sshd]
+
+\	enable = true
+
+\	port = ssh
+
+\	filter = sshd
+
+\	logpath = /var/log/auth.log
+
+\	maxretry = 3
+
+\	bantime = 3600
+
+\	ignoreip = 127.0.0.1
+
+|	[ systemctl restart fail2ban.service ] – не забывай
+
+|	[ fail2ban-client status ] – проверить
+
+|	[ fail2ban-client status sshd ] – проверить поподробнее
