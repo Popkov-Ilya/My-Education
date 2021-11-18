@@ -409,3 +409,24 @@ https://youtu.be/1hvVcEhcbLM
 |	[ ufw allow from <u>ip.ip.ip.ip/mask</u> to any port 22 ] – разрешить ssh с маски
 
 |	[ ufw delete 1 ] – удалить первое правило
+
+
+
+## TRACKS & LOGS
+
+|	[ ls /var/log ] – логи
+
+|	[ shred ] – утилита для настоящего удаления файлов
+
+|	[ shred -vfzu file_name] – (v=verboze, f=force то есть с изменением прав, z=zero то есть с записью нулей после трех зачисток, чтобы никто ничего не понял, u=удалить типа сам файл, хз)
+
+|	[ nano .bash_history ] – почитать историю
+
+|	[ >.bash_history ] – почистить историю
+
+
+
+## FAIL2BAN
+
+*ssh bruteforce protection*
+
