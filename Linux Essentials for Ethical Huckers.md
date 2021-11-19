@@ -1,18 +1,14 @@
 # Linux Essentials for Ethical Hackers
 
-https://youtu.be/1hvVcEhcbLM
+Сурс – https://youtu.be/1hvVcEhcbLM
 
-*Ubuntu - дистр от народа*
+*Запомните, дети, Ubuntu - дистр от народа*
 
 ## BASE
 
 |	win + t (ctrl + alt + t) – терминал
 
-
-
 |	[ pwd ] – print working directory
-
-
 
 |	[ ls –l ] – таблица с правами и датой изменения
 
@@ -22,25 +18,17 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ ls -alpsh ] – удобно
 
-
-
 |	[ touch ] – быстро создать файл
 
 |	[ echo "text" > ] – быстро записать в файл
 
 |	[ cat ] – быстро вывести содержимое файла
 
-
-
 |	[ whatis ] – короткий help
-
-
 
 |	[ cp file_name dir_name ] – так можно
 
 |	[ mv file_name dir_name ] - так тоже
-
-
 
 |	[ rm -R ] - удалить директорию (не путай с rmdir - он для пустых)
 
@@ -50,19 +38,13 @@ https://youtu.be/1hvVcEhcbLM
 
 | owner - owner_group - other
 
-
-
 |	[ chmod  a=rwx ] – установить права для всех
 
 |	[ chmod -R ugo-x ]  – убавить права рекурсионно
 
-
-
 |	[ chown user_name file_name ] – так вот 
 
 |	[ chgrp group_name file_name ] – вот так вот
-
-
 
 |	[ useradd user_name ] – намутить пользователя
 
@@ -78,15 +60,16 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ visudo ] – только от имени рута или админа можно редачить пользователей
 
-\	username ALL=(ALL:ALL) ALL	= пользователь может из любой сессии(1) для всех юзеров(2) для всех групп(3) применять любые команды(4)
+```properties
+#пользователь может из любой сессии(1) для всех юзеров(2) для всех групп(3) применять любые команды(4)
+username ALL=(ALL:ALL) ALL	 
 
-\	username ALL=(ALL) /usr/bin/apt-get	= пользователь может использовать из судо только апт-гет
+#пользователь может использовать из судо только апт-гет
+username ALL=(ALL) /usr/bin/apt-get	
 
-\	%group_name ALL=(ALL:ALL) /usr/bin/apt =группа члены которой могут выполнять эти команды
-
-
-
-
+#группа члены которой могут выполнять эти команды
+%group_name ALL=(ALL:ALL) /usr/bin/apt 
+```
 
 
 
@@ -98,15 +81,11 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ file file_name ] – тип файла
 
-
-
 |	[ locate word ] – ищет файл по слову
 
 |	[ locate /path --all "word" ] – то же самое
 
 |	[ locate --all -c -i "word" ] – вывести количество совпадений с игнором регистра
-
-
 
 |	[ find /dir_name -type f  -name "file_name" ] – найти файл (d - директорию)
 
@@ -151,8 +130,6 @@ https://youtu.be/1hvVcEhcbLM
 |	[ cat /etc/os-release] – тоже инфа про операционку
 
 |	[ cat /etc/*release] – тоже инфа про операционку
-
-
 
 |	[ lscpu ] – инфа про процессор
 
@@ -256,7 +233,10 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ vim /etc/hosts ] – инфа про хосты
 
-\	0.0.0.0 google.com = заблочить гугл зачем-то??? + не забыть перезапустить адаптер
+```properties
+#заблочить гугл зачем-то??? + не забыть перезапустить адаптер
+0.0.0.0 google.com 
+```
 
 
 
@@ -268,13 +248,12 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ vim /etc/proxychains.conf ] – настроить прокси
 
-\	random_chain
-
-\	proxy_dns
-
-\	socks4    127.0.0.1    9050
-
-\	socks5    127.0.0.1    9050 
+```properties
+random_chain
+proxy_dns
+socks4    127.0.0.1    9050
+socks5    127.0.0.1    9050 
+```
 
 |	[ proxychains firefox dnsleaktest.com ] – протестить прокси
 
@@ -334,13 +313,16 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ sudo vim /etc/ssh/sshd_config ] – настройки ssh сервера
 
-\	PerminRootLogin no	=запретить подключаться к root-пользователю
-
-\	MaxAuthTries 4	=Лимит попыток подключения
-
-\	MaxSession 3	=Лимит сессий
-
-\	PasswordAuthenticarion no	=Закрыть подключение по паролю, только по рса ключу
+```properties
+#запретить подключаться к root-пользователю
+PerminRootLogin no
+#Лимит попыток подключения
+MaxAuthTries 4
+#Лимит сессий
+MaxSession 3
+#Закрыть подключение по паролю, только по рса ключу
+PasswordAuthenticarion no
+```
 
 |	[ systemctl restart sshd.service ] – не забываем перезагрузить
 
@@ -426,7 +408,7 @@ https://youtu.be/1hvVcEhcbLM
 
 
 
-## FAIL2BAN
+## BRUTEFORCE BAN
 
 *ssh bruteforce protection*
 
@@ -436,21 +418,16 @@ https://youtu.be/1hvVcEhcbLM
 
 |	[ nano /etc/fail2ban/jail.local ] – файл конфигураций (попечатать)
 
-\	[sshd]
-
-\	enable = true
-
-\	port = ssh
-
-\	filter = sshd
-
-\	logpath = /var/log/auth.log
-
-\	maxretry = 3
-
-\	bantime = 3600
-
-\	ignoreip = 127.0.0.1
+```properties
+[sshd]
+enable = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 3600
+ignoreip = 127.0.0.1
+```
 
 |	[ systemctl restart fail2ban.service ] – не забывай
 
