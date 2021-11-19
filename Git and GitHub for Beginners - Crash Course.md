@@ -79,19 +79,35 @@ git status #прочекаем
 git add changed_file_name #добавим файл в будущий коммит
 git commit -m "change file_name"
 
-#=================первый вариант слияния=================
+```
+
+
+
+Первый вариант слияния
+
+```bash
 git checkout master
 git diff feature-branch #сравнить мастер с новой веткой
 git merge feature-branch #замерджить фичи в мастер
+```
 
-#=================второй вариант слияния=================
+
+
+Второй вариант слияния
+
+```bash
 git push -u origin feature-branch #закидываем
 #а теперь весело скачем на GitHub и делаем pull request и merge
 git checkout master
 git pull
 #well done
+```
 
-#=========================finally=========================
+
+
+Ну и в конце
+
+```bash
 git branch -d feature-branch #удалить ветку
 ```
 
