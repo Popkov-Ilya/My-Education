@@ -434,3 +434,4 @@ ignoreip = 127.0.0.1
 |	[ fail2ban-client status ] – проверить
 
 |	[ fail2ban-client status sshd ] – проверить поподробнее
+
