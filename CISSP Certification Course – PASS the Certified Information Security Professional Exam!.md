@@ -45,3 +45,4 @@ CISSP – Certified Information Systems Security Professional
 5. Requirements – требования;
 6. Due diligence – должная осмотрительность? (проверка слабостей, уязвимостей);
 7. Assessment – оценка;
+
