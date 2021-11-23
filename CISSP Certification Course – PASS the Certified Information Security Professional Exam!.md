@@ -21,7 +21,7 @@ CISSP – Certified Information Systems Security Professional
 
 ## Управление рисками
 
-##### Части курса:
+##### Части управления рисками:
 
 1. Принципы иб гос учереждений
 2. Комплайнс
@@ -43,6 +43,14 @@ CISSP – Certified Information Systems Security Professional
 3. Measurement – измерение?;
 4. Likelihood – веротность;
 5. Requirements – требования;
-6. Due diligence – должная осмотрительность? (проверка слабостей, уязвимостей);
-7. Assessment – оценка;
+6. Complience – соблюдение требований;
+7. Due diligence – должная осмотрительность? (проверка слабостей, уязвимостей);
+8. Assessment – оценка;
+9. Awareness – информированность;
+10. Adherence – соблюдение, приверженность;
+11. Ensuring – обеспечение;
+12. Implementation – реализация;
+13. Senior management – высшее руководство;
+14. Set forth by – установленние чего-то кем-то (например, норм правительством);
+15. Impose – наложить (например, политики);
 
