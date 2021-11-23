@@ -30,15 +30,18 @@ CISSP – Certified Information Systems Security Professional
 5. Управление рисками
 6. Моделирование угроз
 7. Основы плана обеспечения непрерывности бизнеса (business continuity plan fundamentals)
-8. Cтратегия и практика внедрения (acquisition strategy and practice)
+8. Cтратегия и практика приобретения (acquisition strategy and practice)
 9. Политики безопасности
 10. Информированность и тренинги (security awareness and training)
 
 
 
-##### Важные комментарии
+##### Важные термины
 
-CIA – confidentiality, integrity, availability (конфиденциальность, целостность, доступность)
-
-
-
+1. CIA – confidentiality, integrity, availability (конфиденциальность, целостность, доступность);
+2. Countermeasure – контрмера;
+3. Measurement – измерение?;
+4. Likelihood – веротность;
+5. Requirements – требования;
+6. Due diligence – должная осмотрительность? (проверка слабостей, уязвимостей);
+7. Assessment – оценка;
