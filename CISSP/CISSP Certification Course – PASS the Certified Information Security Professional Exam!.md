@@ -53,4 +53,29 @@ CISSP – Certified Information Systems Security Professional
 13. Senior management – высшее руководство;
 14. Set forth by – установленние чего-то кем-то (например, норм правительством);
 15. Impose – наложить (например, политики);
+15. Personal identifieble information (PII) – ПДн;
+15. Expose – раскрывать, разглашать;
+15. Obviously – очевидно;
+15. Treat – обрабатывать?;
+15. Reliable – надежный?; 
+
+
+
+##### Нормативка США
+
+![нормативка США](./US_LOW.png)
+
+
+
+
+
+##### Этика
+
+Есть такая штука IAB (*internet architecture board of ethics*), ISOC (*Internet Society*) – общество интернета, IETF (*Internet Engineering Task Force*) – инженерный совет интернета.
+
+А еще существует ISC2 (*The International Information System Security Certification Consortium*) Code of Ethics
+
+Также существует RFC (*Request for Comments*) –  документ из серии пронумерованных информационных документов Интернета, содержащих технические спецификации и стандарты, широко применяемые во всемирной сети. 
+
+RFC 1087 – Ethics and the Internet (см в отдельном файле)
 
