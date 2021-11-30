@@ -21,7 +21,7 @@ CISSP – Certified Information Systems Security Professional
 
 ## Управление рисками
 
-### Части управления рисками:
+### 1. Части управления рисками:
 
 1. Принципы иб гос учереждений
 2. Комплайнс
@@ -36,7 +36,7 @@ CISSP – Certified Information Systems Security Professional
 
 
 
-### Нормативка США
+### 2. Нормативка США
 
 ![нормативка США](./images/US_LOW.png)
 
@@ -44,7 +44,7 @@ CISSP – Certified Information Systems Security Professional
 
 
 
-### Этика
+### 3. Этика
 
 Есть такая штука IAB (*internet architecture board of ethics*), ISOC (*Internet Society*) – общество интернета, IETF (*Internet Engineering Task Force*) – инженерный совет интернета.
 
@@ -56,7 +56,7 @@ RFC 1087 – Ethics and the Internet (см в отдельном файле)
 
 
 
-### Документация
+### 4. Документация
 
 5 типов документирования
 
@@ -78,33 +78,45 @@ RFC 1087 – Ethics and the Internet (см в отдельном файле)
 
 
 
-### Менеджмент рисков
+### 5. Менеджмент рисков
 
 Риск = Угроза * Уязвимость * Последствия
 
-Этапы анализа рисков
+**Этапы анализа рисков**
 
 1. Asset identification;
 2. Vulnurability identification;
 3. Threat assessment (оценка угроз);
 4. Probability quantification;
-5. Probability qualification;
+5. Probability qualitification;
 6. Financial impact evaluation (оценка финансового влияния);
 7. Countermeasures determination (определение контрмер);
 
-Полезнаый стандарт AS/NZS 4360:2004: RISK MANAGEMENT
+*Полезнаый стандарт AS/NZS 4360:2004: RISK MANAGEMENT*
 
-4 принципа управления рисками:
+**4 принципа управления рисками:**
 
 * Избегание;
 * Смягчение;
 * Принятие;
 * Перенос;
 
-Формулы для рассчета рисков:
-$$
+
+$$ {Формулы для рассчета рисков:}
+ФОРМУЛЫ\ ДЛЯ\ РАССЧЕТА\ РИСКОВ:\\\\
 Asset\ Value\ (AV) = 100.000\\
 Explosure\ Factor\ (EF) = 30\%\\
 Single\ Lost\ Expectancy\ (SLE) = AV * EF = 30.000\\
-Annual\ Rate\ Occurancy\ (ARO) = 1/5 = 0,2
+Annual\ Rate\ Occurancy\ (ARO) = 1/5 = 0,2\\
+Annual\ Lost\ Expectancy\ (ALE) = SLE * ARO = 6.000
 $$
+
+
+### 6. Непрерывность бизнеса
+
+*термин:* BCP – Business Continuity Plan
+
+*термин:* DRP – Disaster Recovery Plan
+
+
+
