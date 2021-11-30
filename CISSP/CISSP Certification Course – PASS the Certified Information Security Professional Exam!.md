@@ -6,7 +6,7 @@
 
 CISSP – Certified Information Systems Security Professional
 
-##### Части курса:
+### Части курса:
 
 1. Управление рисками и безопасностью (security & risk management)
 2. Безопасность активов (asset security)
@@ -38,6 +38,8 @@ CISSP – Certified Information Systems Security Professional
 
 ### 2. Нормативка США
 
+**|	Список нормативных документов США**
+
 ![нормативка США](./images/US_LOW.png)
 
 
@@ -67,6 +69,8 @@ RFC 1087 – Ethics and the Internet (см в отдельном файле)
 | Guideline     | Описание что КОНКРЕТНО нужно сделать<br />Например, в случае выезда с рабочим ноутбуком вы должны придерживаться правил предосторожности для предотвращения кражи или поломки ноутбука |
 | Procedure     | Пошаговое описание<br />Например, для реализации SSH на роутере введите enable и введите команды |
 | Baseline      | Минимальные системные требования<br />Например, TFTP должен быть выключен на всех серверах, кроме непосредственно требующих его. |
+
+**|	Структура документации**
 
 ![](./images/Documents.png)
 
@@ -118,5 +122,15 @@ $$
 
 *термин:* DRP – Disaster Recovery Plan
 
+**|	Состав BCP**
 
+![Состав BCP](./images/BCP.png)
+
+**|	NIST SP 800-34 описывает BCP**
+
+![NIST SP 800-34 описывает BCP](./images/BCP2.png)
+
+**|	Главный документ в BCP это Business Impact Analysis (BIA)**
+
+![**|	Главный документ в BCP это Business Impact Analysis (BIA)**](./images/BIA.png)
 
