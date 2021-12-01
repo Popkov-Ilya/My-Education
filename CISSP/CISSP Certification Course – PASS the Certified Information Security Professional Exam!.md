@@ -134,3 +134,7 @@ $$
 
 ![**|	Главный документ в BCP это Business Impact Analysis (BIA)**](./images/BIA.png)
 
+**|	BIA процессы**
+
+![BIA2](.\images\BIA2.png)
+
