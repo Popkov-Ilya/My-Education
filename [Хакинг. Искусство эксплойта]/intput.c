@@ -8,7 +8,7 @@ int main(){
     printf("Сколько раз повторить");
     scanf("%d", &count);
 
-    for(int i=0; i<count; i++){
+    for(i=0; i<count; i++){
         printf("%3d - %s\n", i, message);
     }
 }
