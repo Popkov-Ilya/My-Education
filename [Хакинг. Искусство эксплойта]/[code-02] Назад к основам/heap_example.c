@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(){
+int main(int argc, char *argv[]){
     char *char_ptr;
     int *int_ptr;
     int mem_size;
@@ -21,7 +21,7 @@ int main(){
     }
 
     strcpy(char_ptr, "Эта память находится в куче.\n"); // 29 символов = 23*2+6=53 байта?
-    printf("char_ptr (%p) → %s\n" char_ptr, char_ptr); // %s тоже съедает указатель
+    printf("char_ptr (%p) → %s\n", char_ptr, char_ptr); // %s тоже съедает указатель
     
     // ================================! 2 итерация !================================
     printf("===! act 2 !===\n");
@@ -52,7 +52,7 @@ int main(){
     }
 
     strcpy(char_ptr, "новая память"); // 12 символов = 11*2+1=23 байта?
-    printf("char_ptr (%p) → %s\n" char_ptr, char_ptr);
+    printf("char_ptr (%p) → %s\n", char_ptr, char_ptr);
 
     // ================================! 5 итерация !================================
     printf("===! act 5 !===\n");
