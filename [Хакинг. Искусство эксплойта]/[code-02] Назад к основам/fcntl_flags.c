@@ -23,15 +23,15 @@ void display_flags(char *label, unsigned int value){
 }
 
 void binary_print(unsigned int value){
-    unsigned int mask = 0xff000000;
-    unsigned int shift = 256 * 256 * 256;
+    unsigned int mask = 0xff000000; // ---------------→ ff 00 00 00 → 00 ff 00 00 → 00 00 00 ff → 00 00 00 ff
+    unsigned int shift = 256 * 256 * 256; // ---------→ 01 00 00 00 → 00 01 00 00 → 00 00 01 00 → 00 00 00 01 
     unsigned int byte, byte_iterator, bit_iterator;
 
     for(byte_iterator = 0; byte_iterator < 4; byte_iterator++){
-        byte = (value & mask) / shift;
+        byte = (value & mask) / shift; // не понятно, зачем умножение на маску. Возможно дело в целочисленном делении
         printf(" ");
         for(bit_iterator = 0; bit_iterator < 8; bit_iterator++){
-            if(byte & 0x80) printf("1");
+            if(byte & 0x80) printf("1"); // ---------→ 0x80 = 1000 0000
             else printf("0");
             byte *= 2;
         }
