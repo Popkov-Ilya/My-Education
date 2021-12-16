@@ -4,7 +4,7 @@
 
 void *error_checked_malloc(unsigned int); // Прототип функции ?????????
 
-int main(int argc, int *argv[]){
+int main(int argc, char *argv[]){
     char *char_ptr;
     int *int_ptr;
     int mem_size;
@@ -56,5 +56,5 @@ void *error_checked_malloc(unsigned int size){
         fprintf(stderr, "Ошибка, невозможно выделить память в куче.\n");
         exit(-1);
     }
-    returt ptr;
+    return ptr;
 }
