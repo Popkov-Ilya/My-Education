@@ -80,3 +80,15 @@ fprintf(stderr, "Usage: %s <name>\n", argv[0]); // смотри как крас�
 if(some_var == NULL) printf("some_var is null"); // NULL всегда пишется капсом
 ```
 
+**|	Прототип функции**
+
+```c
+void *my_malloc(unsigned int); // объявляем Прототип функции
+
+// используем прототип
+
+void *my_malloc(unsigned int size){ // реализуем протитип
+    returt malloc(size);
+}
+```
+
