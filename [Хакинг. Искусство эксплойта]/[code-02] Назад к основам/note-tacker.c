@@ -10,7 +10,7 @@ void usage(char *progname, char *filename){
     exit(0);
 }
 
-void fatal(char *) // из helper.h
+void fatal(char *); // из helper.h
 void *ec_malloc(unsigned int); // из helper.h
 
 int main(int argc, char *argv[]){
@@ -29,28 +29,30 @@ int main(int argc, char *argv[]){
 
     // ================================! Открываем !================================
     
-    fd = open(datafile, O_WRONLY|O_CREATE|O_APPEND, S_IRUSR|S_IWUSR); 
+    fd = open(datafile, O_WRONLY|O_CREAT|O_APPEND, S_IRUSR|S_IWUSR); 
     // только на запись, 
     // создать если нет, 
     // добавить в конец если есть
     // когда создашь - создавай с правами для чтения и записи владельцем (600)
 
     if(fd == -1) fatal("в функции main() при открытии файла");
-    printf("[DEBUG] дескриптор файла: %d\n");
+    printf("[DEBUG] дескриптор файла: %d\n", fd);
+    
+    userid = getuid(); // самая важная строчка
 
     // ================================! Пишем !================================
 
     if(write(fd, &userid, 4) == -1) fatal("в функции main() при записи uid"); // записываем uid в начало
     write(fd, "\n", 1);
 
-    if(write(fd, buffer, strlen(buffer)) == -1) fatal("в функции main() буффера")
-    write(fd, "\n" 1);
+    if(write(fd, buffer, strlen(buffer)) == -1) fatal("в функции main() буффера");
+    write(fd, "\n", 1);
 
     // ================================! Закрываем !================================
 
     if(close(fd) == -1) fatal("в функции main() при закрытии");
 
-    printf("Заметка сохранена");
+    printf("Заметка сохранена\n");
     free(buffer);
     free(datafile);
 }
