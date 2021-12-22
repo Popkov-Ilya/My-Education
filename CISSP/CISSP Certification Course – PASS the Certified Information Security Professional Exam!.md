@@ -6,6 +6,8 @@
 
 CISSP – Certified Information Systems Security Professional
 
+[Книжки по CISSP](https://www.mhprofessional.com/catalogsearch/result/?q=CISSP)
+
 ### Части курса:
 
 1. Управление рисками и безопасностью (security & risk management)
@@ -17,7 +19,7 @@ CISSP – Certified Information Systems Security Professional
 7. Процедуры ИБ (security operation)
 8. Безопасность разработки (software development security)
 
----
+
 
 ## Управление рисками
 
@@ -96,14 +98,18 @@ RFC 1087 – Ethics and the Internet (см в отдельном файле)
 6. Financial impact evaluation (оценка финансового влияния);
 7. Countermeasures determination (определение контрмер);
 
-*Полезнаый стандарт AS/NZS 4360:2004: RISK MANAGEMENT*
+*Полезнаый стандарт AS/NZS 4360:2004: RISK MANAGEMENT.*
+
+*Мысли шире. Например, менеджмент рисков затрагивает в том числе найм сотрудников и проверка таковых. В том числе составление NDA – non-disclosure agreements*
+
+---
 
 **4 принципа управления рисками:**
 
 * Избегание;
 * Смягчение;
 * Принятие;
-* Перенос;
+* Перенос.
 
 
 $$ {Формулы для рассчета рисков:}
@@ -122,6 +128,10 @@ $$
 
 *термин:* DRP – Disaster Recovery Plan
 
+---
+
+#### BCP
+
 **|	Состав BCP**
 
 ![Состав BCP](./images/BCP.png)
@@ -137,4 +147,59 @@ $$
 **|	BIA процессы**
 
 ![BIA2](.\images\BIA2.png)
+
+---
+
+*Важной характеристикой BCP является MTD – maximum tolerable downtime.*
+
+*Помимо этого есть RTO – recovery time objectives*
+
+*MTTF – mean time to failure*
+
+*MTTR – mean time to repair*
+
+*MTBF – mean time betwin failures (Usefull life)*
+$$ {Условие устойчивости бизнеса}
+УСЛОВИЕ\ УСТОЙЧИВОСТИ\ БИЗНЕСА\\\\
+RTO < MTD\\
+MTBF = MTTF + MTTR
+$$
+
+
+---
+
+**|	BP Evaluation**
+
+![BP Evaluation](image/BP Evaluations.png)
+
+**|	BP Testing**
+
+![BP Testing](image/BP Testing.png)
+
+
+
+#### DRP
+
+DRP делится на 4 уровня документов:
+
+1) short-term;
+2) mid-term;
+3) long-term;
+4) not required.
+
+*Например, DRP может быть стратегия ведения бэкапов.*
+
+Важным аспектом DRP является назначения RTO – recovery team. Людей, которые знают, что делать при особой ситуации. (~Как же все это напоминает наше ОБЖ~)
+
+**|	DR Testin**
+
+![DR Testin](image/DR Testing.png)
+
+
+
+### 7. Политика управления персоналом (Employment Policies)
+
+**|	Состав политики**
+
+![Состав политики](image/Employment Policies.png)
 
