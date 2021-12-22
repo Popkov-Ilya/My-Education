@@ -170,11 +170,11 @@ $$
 
 **|	BP Evaluation**
 
-![BP Evaluation](./image/BP Evaluations.png)
+![BP Evaluation](./images/BP_Evaluations.png)
 
 **|	BP Testing**
 
-![BP Testing](./image/BP Testing.png)
+![BP Testing](./images/BP_Testing.png)
 
 
 
@@ -193,7 +193,7 @@ DRP делится на 4 уровня документов:
 
 **|	DR Testin**
 
-![DR Testin](./image/DR Testing.png)
+![DR Testin](./images/DR_Testing.png)
 
 
 
@@ -201,5 +201,5 @@ DRP делится на 4 уровня документов:
 
 **|	Состав политики**
 
-![Состав политики](./image/Employment Policies.png)
+![Состав политики](./images/Employment_Policies.png)
 
