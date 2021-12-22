@@ -146,7 +146,7 @@ $$
 
 **|	BIA процессы**
 
-![BIA2](.\images\BIA2.png)
+![BIA2](./images/BIA2.png)
 
 ---
 
@@ -170,11 +170,11 @@ $$
 
 **|	BP Evaluation**
 
-![BP Evaluation](image/BP Evaluations.png)
+![BP Evaluation](./image/BP Evaluations.png)
 
 **|	BP Testing**
 
-![BP Testing](image/BP Testing.png)
+![BP Testing](./image/BP Testing.png)
 
 
 
@@ -193,7 +193,7 @@ DRP делится на 4 уровня документов:
 
 **|	DR Testin**
 
-![DR Testin](image/DR Testing.png)
+![DR Testin](./image/DR Testing.png)
 
 
 
@@ -201,5 +201,5 @@ DRP делится на 4 уровня документов:
 
 **|	Состав политики**
 
-![Состав политики](image/Employment Policies.png)
+![Состав политики](./image/Employment Policies.png)
 
