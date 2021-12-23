@@ -10,7 +10,7 @@
 int print_notes(int, int, char *);// -----→ Функция вывода заметок
 int find_user_note(int, int); // ---------→ Функция поиска заметки пользователя
 int search_note(char *, char *); // ------→ Функция поиска по ключевым словам
-void fatal(char *) // --------------------→ Функция обработки ошибок из helper.h
+void fatal(char *); // --------------------→ Функция обработки ошибок из helper.h
 
 int main(int argc, char *argv[]){
     int userid, printing = 1, fd;
@@ -38,7 +38,7 @@ int print_notes(int fd, int uid, char *searchstring){
     read(fd, note_buffer, note_length);
     note_buffer[note_length] = 0; // ограничиваем мусор
 
-    if(search_note(note_buffer, seachingstring)) printf(note_buffer);
+    if(search_note(note_buffer, searchstring)) printf(note_buffer);
     return 1;    
 }
 
