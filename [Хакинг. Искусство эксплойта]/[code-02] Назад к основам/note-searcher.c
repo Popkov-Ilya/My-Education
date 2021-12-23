@@ -36,5 +36,47 @@ int print_notes(int fd, int uid, char *searchstring){
     if(note_length == -1) return 0;
 
     read(fd, note_buffer, note_length);
-    note_buffer[note_length] = 0;
+    note_buffer[note_length] = 0; // ограничиваем мусор
+
+    if(search_note(note_buffer, seachingstring)) printf(note_buffer);
+    return 1;    
+}
+
+// Функция просто определяет длину следующей заметки с нужным uid
+int find_user_note(int fd, int user_uid){
+    int note_uid = 1;
+    unsigned char byte; // лол
+    int length;
+
+    while(note_uid != user_uid){
+        if(read(fd, &note_uid, 4) != 4) return -1; // Если 4 байта не прочитаны, вернуть конец файла
+        if(read(fd, &byte, 1) != 1) return -1; // Если байт не прочитан, вернуть конец файла (непонятный байт)
+
+        byte = length = 0;
+        while(byte != '\n'){
+            if(read(fd, &byte, 1) != 1) return -1; // Если байт не прочитан, вернуть конец файла
+            length++;
+        }
+    }
+
+    lseek(fd, length * -1, SEEK_CUR); // Сместить позицию считывания на lenth байтов
+    printf("[DEBUG] обнаружена заметка длиной %d байтов для id %d\n", length, note_uid);
+    return length;
+}
+
+int search_note(char* note, char* keyword){
+    int i, keyword_length, match=0;
+
+    keyword_length = strlen(keyword);
+    if(keyword_length == 0) return 1;
+
+    for(i=0; i<strlen(note); i++){
+        if(note[i] == keyword[match]) match++; // совпадение n-го байта
+        else {
+            if(note[i] == keyword[0]) match = 1; // начать с начала, если не совпадает с n-м байтом, но совпадает с первым
+            else match = 0; // обнулить, если ни с кем не совпало
+        }
+        if(match == keyword_length) return 1; // случай полного совпадения
+    }
+    return 0;
 }
