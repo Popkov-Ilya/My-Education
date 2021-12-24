@@ -67,6 +67,7 @@ int find_user_note(int fd, int user_uid){
 int search_note(char* note, char* keyword){
     int i, keyword_length, match=0;
 
+    printf("[MY-DEBUG] note: (%s), keyword: (%s)", note, keyword);
     keyword_length = strlen(keyword);
     if(keyword_length == 0) return 1;
 
