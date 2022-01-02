@@ -1,1 +1,5 @@
-print("Hello")
+print("   /|")
+print("  / |")
+print(" /  |")
+print("/___|")
+print("PyCharm is complicated")
