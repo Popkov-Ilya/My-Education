@@ -32,6 +32,14 @@ int_var = 5
 print("xxx" + str(int_var))
 ```
 
+##### input(str)
+
+```python
+name = input("enter your name: ") # переноса строки не будет
+```
+
+
+
 ##### #math
 
 ```python
