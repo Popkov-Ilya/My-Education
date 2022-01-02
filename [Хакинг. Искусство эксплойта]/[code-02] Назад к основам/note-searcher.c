@@ -50,7 +50,7 @@ int find_user_note(int fd, int user_uid){
 
     while(note_uid != user_uid){
         if(read(fd, &note_uid, 4) != 4) return -1; // Если 4 байта не прочитаны, вернуть конец файла
-        if(read(fd, &byte, 1) != 1) return -1; // Если байт не прочитан, вернуть конец файла (непонятный байт)
+        //if(read(fd, &byte, 1) != 1) return -1; // Если байт не прочитан, вернуть конец файла (непонятный байт)
 
         byte = length = 0;
         while(byte != '\n'){
@@ -65,9 +65,9 @@ int find_user_note(int fd, int user_uid){
 }
 
 int search_note(char* note, char* keyword){
-    int i, keyword_length, match=0;
+    int i, keyword_length, match=0; 
 
-    printf("[MY-DEBUG] note: (%s), keyword: (%s)", note, keyword);
+    //printf("[MY-DEBUG] note: (%s), keyword: (%s)", note, keyword);
     keyword_length = strlen(keyword);
     if(keyword_length == 0) return 1;
 
