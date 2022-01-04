@@ -30,8 +30,15 @@ list_var2[1] = "X"
 print(f"lv {list_var}")
 print(f"lv2 {list_var2}")
 
-
-
+print("----------------")
+list2d = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+print(list2d)
+print(len(list2d))
 
 
 
