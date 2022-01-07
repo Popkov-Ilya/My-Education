@@ -18,3 +18,5 @@
 10) https://shodan.io – поисковая система IoT-устройств
 11) https://censys.io – поисковая система по типу shodan
 12) https://inteltechniques.com – агрегатор поисковых движков (бонус – много инфы по OSINT)
+12) https://haveibeenpwned.com/ – полезный сурс
+12) 
