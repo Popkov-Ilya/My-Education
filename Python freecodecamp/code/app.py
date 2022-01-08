@@ -1,4 +1,7 @@
+import translator
 from math import *
+
+
 # ввод
 name = input("Enter your name: ")
 
@@ -14,3 +17,5 @@ phrase = "For " + name + " " + var + " is " + another_var + " " + str(pow(2, 300
 print(phrase.lower().replace("0", "X"))
 print(" /  |")
 print("/___|")
+
+print(translator.translate(name))

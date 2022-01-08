@@ -322,6 +322,82 @@ for i in range(10): # можно и range(1, 10)
 
 
 
+### Try-Except
+
+```python
+try:
+    i = int(input())
+except:
+    print("Error")
+```
+
+А еще лучше
+
+```python
+try:
+    i = int(input())
+except ValueError as err:
+    print(f"Error: {err}")
+except ZeroDivisionError:
+    print("Another error")
+```
+
+В python не принято делать дефолтные except.
+
+
+
+### Работа с файловой системой
+
+##### Чтение
+
+```python
+map_file = open("./map.txt", "r") 
+'''
+путь может быть как полным, так и относительным
+r = чтение
+w = запись
+a = добавление
+r+ = чтение и запись
+'''
+print(map_file.readable()) # bool значение
+print(map_file.readline()) # выведет одну строку (ошибку на конце файла не вызывает)
+print(map_file.read()) # выведет весь файл (как просто)
+print(map_file.readlines()) # выведет все строки в виде массива (как удобно)
+# кстати, кажется, что считывает он строку вместе с переносом строки на конце
+```
+
+
+
+##### Запись
+
+```python
+map_file = open("map_2.txt", "w")
+print(map_file.writable())
+map_file.write("\nsomebody once told me")
+map_file.close()
+```
+
+
+
+### Модули и pip
+
+##### Подключение своего файла
+
+```python
+import python_file_name # не нужно добавлять ".py"
+print(python_file_name.function())
+```
+
+
+
+##### Подключаем что угодно
+
+```bash
+pip install module-name
+```
+
+
+
 ### Заметки
 
 *В конце проги должна оставаться пустая строка.*
@@ -333,4 +409,6 @@ for i in range(10): # можно и range(1, 10)
 *print может выводить вообще все*
 
 *Python не прощает неправильные индексы*
+
+*Коменты в питоне работают следующим образом: <u>Однострочные через \#</u>, <u>Многострочные через \'\'\'</u>*
 
