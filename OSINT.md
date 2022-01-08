@@ -19,4 +19,14 @@
 11) https://censys.io – поисковая система по типу shodan
 12) https://inteltechniques.com – агрегатор поисковых движков (бонус – много инфы по OSINT)
 12) https://haveibeenpwned.com/ – полезный сурс
-12) 
+12) https://mxtoolbox.com/ – ??
+12) Kali Maltego, конечно же
+
+Также для соцсетей
+
+1) https://search4faces.com/ https://phantombuster.com/ + https://www.youtube.com/watch?v=9rn7o-4iwPU 
+2) https://disboard.org/servers 
+3) https://whopostedwhat.com/
+4) https://gist.github.com/nemec/2ba8afa589032f20e2d6509512381114 
+5) https://cse.google.com/cse?&cx=006368593537057042503:efxu7xprihg#gsc.tab=0
+
