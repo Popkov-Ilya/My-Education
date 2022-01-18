@@ -393,6 +393,7 @@ map_file.close()
 
 ```python
 import python_file_name # не нужно добавлять ".py"
+from python_file_name import python_function_or_class_or_smthng # так тоже можно
 print(python_file_name.function())
 ```
 
@@ -402,6 +403,40 @@ print(python_file_name.function())
 
 ```bash
 pip install module-name
+```
+
+
+
+### ООП
+
+##### Классы и объекты
+
+Они существуют!
+
+```python
+class Student: # задание класса
+    def __init__(self, name, major, gpa, is_on_probation): # конструктор
+        self.name = name # self.name мы задаем только здесь и оно существует везде, где оно необходимо
+        self.major = major
+        self.gpa = gpa
+        self.is_on_probation = is_on_probation
+    
+    def is_honor_role(self): # функции
+        return self.gpa >= 3.5
+```
+
+
+
+##### Наследование
+
+Оно тоже!
+
+```python
+class BadStudent(Student): # конструктор тоже наследуется
+    def make_stuff(self):
+        return "some_stuff"
+    def is_honor_role(self): # чтобы перезаписать функцию нужно просто написать ее
+        return False
 ```
 
 
