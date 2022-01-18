@@ -34,9 +34,9 @@ print(res['_source']['name'])
 // обычный запрос на совпадение
 "query": {
     "bool": {
-    	"must": {
-			"match": {"ip": "1.1.1.1"}
-        }
+    	"must": [
+            { "match": { "name": "some text" } }, // поиск some или text
+            { "match_phrase": { "some text" } } // поиск именно "some text"
     }
 }
 ```
@@ -47,7 +47,7 @@ print(res['_source']['name'])
     "range": {
         "@timestamp": {
             "gte": "2022-01-11",
-             "lte": "2022-01-12"
+            "lte": "now-15m"
         }
     }
 }
