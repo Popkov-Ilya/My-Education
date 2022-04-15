@@ -2,6 +2,8 @@
 
 Продолжим тему
 
+сурс => https://youtu.be/Ej_02ICOIgs
+
 
 
 ### Задание класса
@@ -102,6 +104,40 @@ for i in Item.all:
 
 
 
+### Методы класса
+
+```python
+# вызывается Item.inst_from_csv(), но может вызываться и от экземпляра
+class Item:
+    @classmethod
+    def inst_from_csv(cls):  # cls вместо self
+        pass
+```
+
+
+
+### Статические методы
+
+```python
+# вызывается Item.is_integer(), но может вызываться и от экземпляра
+class Item:
+    @staticmethod
+    def is_integer():  # self не требуется
+        pass
+```
+
+
+
+### Приватные методы
+
+```python
+class Item:
+    def __private_method(self):  # просто добавь два подчеркивания!
+        pass
+```
+
+
+
 ### Репрезентация класса (вывод) !! не путай с \_\_str\_\_
 
 ```python
@@ -112,4 +148,64 @@ class Item:
     def __repr__(self):  # не путай с __str__
         return f"Item('{self.name}', {count})"
 ```
+
+
+
+### Наследование (inheritance)
+
+```python
+class Phone(Item):
+    def __init__(self, name: str, price: int, quantity: int = 0, broken: int = 0):
+        super().__init__(name, price, quantity)  # повтори
+        self.broken = broken
+```
+
+
+
+### Readonly свойство (getter)
+
+```python
+class Item:
+    def __init__(self, name: str, price: int, quantity: int = 0):
+        self._name = name # !!!! с одной чертой - выводит уведы при обращении
+
+	@property
+    def name(self):
+        return self._name
+```
+
+```python
+class Item:
+    def __init__(self, name: str, price: int, quantity: int = 0):
+        self.__name = name # !!!! с двумя - запрещает вовсе
+
+	@property
+    def name(self):
+        return self.__name
+```
+
+
+
+### Setter
+
+```python
+class Item:
+    def __init__(self, name: str, price: int, quantity: int = 0):
+        self.__name = name # !!!! с двумя - запрещает вовсе
+
+	@property
+    def name(self):
+        return self.__name
+    
+    @name.setter
+    def name(self, value):
+        if len(value) > 10:
+            raise Exception("Too long!")
+        else:
+        	self.__name = value
+```
+
+
+
+
 
