@@ -17,3 +17,7 @@ python3 -m venv venv
 source /venv/bin/activate
 ```
 
+### SCP - передача файлов
+```bash
+scp опции пользователь1@хост1:файл пользователь2@хост2:файл
+```
