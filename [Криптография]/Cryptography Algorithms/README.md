@@ -64,3 +64,7 @@ $$
 ### DES (Data Encryption Standard)
 
 Принят в 1977. Блок - 64 бита.
+
+![DES](./images/DES.png)
+
+
