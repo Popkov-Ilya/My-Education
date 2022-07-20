@@ -32,3 +32,8 @@ systemctl list-units --type service # все процессы
 systemctl show servise.service --property=ActiveState # однострочное состояние процесса
 ```
 
+
+
+### /etc/hosts
+
+В файле /etc/hosts/ можно указать локальные доменные имена узлов
