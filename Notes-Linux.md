@@ -37,3 +37,14 @@ systemctl show servise.service --property=ActiveState # однострочное
 ### /etc/hosts
 
 В файле /etc/hosts/ можно указать локальные доменные имена узлов
+
+
+
+### ssh
+
+```bash
+ssh-keygen # сгенерирует ключи в папке ~/.ssh/
+ssh-copy-id ignat@host2.test # перенесет публичный ключ на хост
+ssh ignat@host2.test # подключится по ключу
+```
+
