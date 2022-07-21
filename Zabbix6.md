@@ -165,12 +165,3 @@ zabbix_sender -z 10.0.10.10 -s "zabbix" -k trap -o "Some text"
 ## SSH Agent
 
 Теперь так можно!
-
-
-
-
-
-
-
-# Vulners Plugin
-
