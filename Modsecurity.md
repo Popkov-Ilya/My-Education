@@ -199,6 +199,8 @@ git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git
 
 
 
-### ansible
+### Сурсы
 
 https://github.com/perryk/ansible-role-nginx-modsec3-crs3
+
+https://www.youtube.com/watch?v=XzeO2EL4sLU
