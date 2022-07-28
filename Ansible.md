@@ -109,10 +109,14 @@ ansible-playbook -i inventory.yaml basic.yaml
         creates: test.txt # отменяет действие, если файл уже создан
 ```
 
-```
+```yaml
 - name: Install Some Stuff
   hosts: all
   become: yes
+  
+  vars:
+    message1: Privet
+    secret: secret
   
   tasks:
   - name: Install Apache
@@ -120,8 +124,70 @@ ansible-playbook -i inventory.yaml basic.yaml
     
   - name: Start Apache
     service: name=httpd state=started enabled=yes
+    
+  - name: Print Variable
+    debug:
+      var: message1 # выведет сообщение Privet на всех серверах
+    
+  - set_fact: full_message="{{ message1 }}{{ secret }}"
+  
+  - shell: uptime
+  register: results # сохранит значение uptime в переменной results
+    
+  - debug:
+      msg: "Sekretnoe slovo {{ full_message }} {{ results.stdout }}" # выведет full_message и stdout из uptime
+      
+  - debug:
+      var: ansible_distribution # стандартные переменные    
 ```
 
 
 
-### 
+```yaml
+---
+- name: install Apache
+  hosts: all
+  become: yes
+  
+  vars:
+    source_file: ./MyWebSite/index.html
+    destin_file: /var/www/html
+    
+  tasks:
+  - name: Check OS
+    debug: var=ansible_os_family
+
+  - block:
+      - name: INstal aapache web server for RH
+        yum: mane=httpd state=latest
+        
+      - name: Copy file
+        copy: src={{ source_file }} dest={{ destin_file }} mode=0555
+        notify: Restart Apache RedHat   
+        
+      - name: Start service
+        service: name=httpd state=started enabled=yes
+    when: ansible_os_family == "RedHat"
+    
+    
+  - block:
+      - name: INstal aapache web server for RH
+        yum: mane=apache2 state=latest
+        
+      - name: Copy file
+        copy: src={{ source_file }} dest={{ destin_file }} mode=0555
+        notify: Restart Apache Debian   
+        
+      - name: Start service
+        service: name=apache2 state=started enabled=yes
+    when: ansible_os_family == "Debian"
+    
+    
+    
+  handlers:
+  - name: Restart Apache RedHat
+    service: name=httpd state=restarted
+  - name: Restart Apache Debian
+    service: name=apache2 state=restarted
+```
+
