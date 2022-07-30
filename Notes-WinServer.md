@@ -39,3 +39,11 @@ Get-ADGroupMember -Identity Administrators
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate #важно, путь к msi без точки в начале
 ```
 
+
+
+**| WinGet**
+
+```powershell
+winget install --id Git.Git -e --source winget # установит гит
+```
+
