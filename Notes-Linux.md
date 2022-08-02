@@ -40,6 +40,33 @@ systemctl show servise.service --property=ActiveState # однострочное
 
 
 
+###  Interfaces
+
+*/etc/netplan/\**
+
+В этих файлах можно конфижить интерфейсы и добавлять их если что
+
+```bash
+sudo netplan apply
+```
+
+
+
+```bash
+ifdown enp0s3
+ifconfig enp0s3 down # одно и то же, нижнее работает лучше
+
+/etc/init.d/networking stop # тоже полезно
+```
+
+
+
+### 
+
+
+
+
+
 ### ssh
 
 ```bash
